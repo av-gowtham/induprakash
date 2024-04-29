@@ -20,7 +20,6 @@
   color: #FCA311;
   font-weight: 500;
   font-size: 30px;
-  /* text-align: start; */
 }
 
 .about-des {
@@ -51,8 +50,7 @@
   height: 270px;
   width: 100vw;
   white-space: nowrap;
-  overflow-x: auto;
-  /* display: none; */
+  overflow-x: hidden;
   mask: linear-gradient(90deg, transparent, white 20%, white 80% , transparent );
 }
 
