@@ -81,9 +81,19 @@ function cursor() {
 }
 cursor();
 
-
+//After clicking the links the slider will close
 sliderLink.forEach(link => {
   link.addEventListener('click', () => {
     sliderCheckbox.checked = false;
   })
 })
+
+// Scroll to the top of the page on page refresh
+window.addEventListener('beforeunload', function() {
+  window.scrollTo(0, 0);
+});
+
+// Prevent the browser from restoring the scroll position
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
