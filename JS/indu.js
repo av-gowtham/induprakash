@@ -8,7 +8,7 @@ const sliderCheckbox = document.getElementById('slider-checkbox');
 const openSlider = document.querySelector('.open-slide-bar');
 
 setTimeout(() => {
-  loader.style.top = "-120%";
+  loader.style.top = "-100%";
   header.style.position = 'relative';
   header.style.top = "50px";  
 }, 3400);
