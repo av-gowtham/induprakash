@@ -1,0 +1,207 @@
+#nav {
+  height: 20vh;
+  background-color: #000;
+}
+
+.nav-wrap {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 0 60px;
+}
+
+.nav-left {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #E5E5E5;
+}
+
+.nav-left span {
+  color: #FCA311;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-btn {
+  height: fit-content;
+  width: fit-content;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0 20px 0 0;
+  padding: 5px 0;
+  border: 2px solid #FCA311;
+  font-weight: 400;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.nav-btn::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #FCA311;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease .4s;
+}
+
+.nav-btn:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+
+.home::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+.home .bg-wave-img {
+  top: 50%;
+}
+
+.nav-btn a {
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  padding: 10px 15px;
+  color: #FCA311;
+  text-decoration: none; 
+  font-weight: 500;
+  z-index: 2;
+  position: relative;
+}
+
+.home a {
+  color: #000;
+}
+
+.nav-btn:hover a {
+  color: #000;
+}
+
+.nav-btn:hover .bg-wave-img {
+  top: 50%;
+}
+
+.bg-wave-img {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: url(../svg/wave.svg);
+  background-size: 200% 100%;
+  top: 100%;
+  left: 0;
+  animation: bg-wave 2s linear infinite;
+  transition: all ease .75s;
+  z-index: 1;
+}
+
+@keyframes bg-wave {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 200%;
+  }
+}
+
+.nav-upward-arrow svg{
+  width: 50px;
+  height: 50px;
+  fill: #FCA311;
+  font-weight: 300;
+  border: 2px solid #FCA311;
+  background-color: #000;
+  border-radius: 50%;
+  position: fixed;
+  top: 85%;
+  right: 3%;
+  z-index: 1;
+  transition: all ease .19s;
+  display: none;
+}
+
+.nav-upward-arrow svg:hover {
+  box-shadow: 0 0 24px #FCA311;
+  background-color: #FCA311;
+  fill: #000;
+}
+
+@media (max-width: 1024px) {
+  .nav-left {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .nav-btn a {
+    font-size: 16px;
+    padding: 2px 15px;
+  }
+
+  .nav-btn {
+    padding: 2px 0; 
+  }
+
+  .nav-wrap {
+    padding: 0 20px 0 42px;
+  }
+
+  .nav-upward-arrow svg{
+    transform: scale(.9);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-left {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .nav-btn a {
+    font-size: 16px;
+    padding: 0px 15px;
+  }
+
+  .nav-btn {
+    padding: 0; 
+  }
+
+  .nav-wrap {
+    padding: 0 10px 0 36px;
+  }
+
+  .nav-upward-arrow svg{
+    transform: scale(.7);
+  }
+}
+
+@media (max-width: 650px) {
+  .nav-left {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .nav-right {
+    display: none;
+  }
+
+  #nav {
+    height: 15vh;
+    margin: 0 0 5vh 0;
+  }
+
+  .nav-wrap {
+    padding: 0 20px;
+  }
+}
